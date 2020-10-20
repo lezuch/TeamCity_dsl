@@ -30,8 +30,11 @@ version = "2020.1"
 project {
 
     vcsRoot(HttpsGithubComLezuchSpringPetclinicGitRefsHeadsMain)
-
     buildType(Build)
+    params{
+        text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
+    }
+
 }
 
 object Build : BuildType({
