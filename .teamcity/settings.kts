@@ -29,7 +29,7 @@ version = "2020.1"
 
 project {
 
-    vcsRoot(HttpsGithubComLezuchSpringPetclinicGitRefsHeadsMain)
+    vcsRoot(SpringVsc)
     buildType(Build)
     params{
         text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
@@ -37,11 +37,13 @@ project {
 
 }
 
+
+
 object Build : BuildType({
-    name = "Build"
+    name = "Build and Test"
 
     vcs {
-        root(HttpsGithubComLezuchSpringPetclinicGitRefsHeadsMain)
+        root(SpringVsc)
     }
 
     steps {
@@ -56,8 +58,8 @@ object Build : BuildType({
     }
 })
 
-object HttpsGithubComLezuchSpringPetclinicGitRefsHeadsMain : GitVcsRoot({
-    name = "https://github.com/lezuch/spring-petclinic.git#refs/heads/main"
+object SpringVsc : GitVcsRoot({
+    name = "SpringVsc"
     url = "https://github.com/lezuch/spring-petclinic.git"
     branch = "refs/heads/main"
 })
