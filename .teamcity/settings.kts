@@ -42,9 +42,12 @@ project {
 object Build : BuildType({
     name = "Build and Test"
 
+    artifactRules = "target => target"
+
     vcs {
         root(SpringVsc)
     }
+
 
     steps {
         maven {
