@@ -32,7 +32,7 @@ project {
     vcsRoot(SpringVsc)
     buildType(Build)
     params{
-        text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
+//        text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
     }
 
 }
