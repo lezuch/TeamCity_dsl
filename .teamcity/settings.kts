@@ -1,7 +1,11 @@
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.maven
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
-import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
+
+import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
+import jetbrains.buildServer.configs.kotlin.v2019_2.project
+import jetbrains.buildServer.configs.kotlin.v2019_2.version
+import src.builds.Build
+import src.subproject.Dev
+import src.subproject.Test
+import src.vcs.SpringVsc
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -29,6 +33,7 @@ version = "2020.1"
 
 project {
     subProject(Test)
+    subProject(Dev)
     vcsRoot(SpringVsc)
     buildType(Build)
     params{
@@ -36,37 +41,3 @@ project {
     }
 
 }
-
-
-
-object Build : BuildType({
-    name = "Build and Test"
-
- //   artifactRules = "target => target"
-
-    vcs {
-        root(SpringVsc)
-    }
-
-
-    steps {
-        maven {
-            goals = "package"
-        }
-    }
-
-    triggers {
-        vcs {
-        }
-    }
-})
-
-object SpringVsc : GitVcsRoot({
-    name = "SpringVsc"
-    url = "https://github.com/lezuch/spring-petclinic.git"
-    branch = "refs/heads/main"
-})
-
-object Test : Project({
-    name = "Test"
-})
