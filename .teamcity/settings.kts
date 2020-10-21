@@ -2,8 +2,11 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
+import src.builds.BuildA
+import src.builds.BuildB
 import src.subproject.Dev
 import src.subproject.Test
+import src.vcs.SpringVsc
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -32,7 +35,9 @@ version = "2020.1"
 project {
     subProject(Test)
     subProject(Dev)
-//    vcsRoot(SpringVsc)
+    vcsRoot(SpringVsc)
+    buildType(BuildA)
+    buildType(BuildB)
     params{
        text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
     }

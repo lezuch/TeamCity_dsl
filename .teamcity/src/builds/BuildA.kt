@@ -5,8 +5,8 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import src.vcs.SpringVsc
 
-object Build : BuildType({
-    name = "Build and Test"
+object BuildA : BuildType({
+    name = "Job A"
 
     artifactRules = "target => target"
 
