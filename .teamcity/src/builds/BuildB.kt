@@ -8,8 +8,6 @@ import src.vcs.SpringVsc
 object BuildB : BuildType({
     name = "Job B"
 
-    artifactRules = "target => target"
-
     vcs {
         root(SpringVsc)
     }

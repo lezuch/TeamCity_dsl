@@ -1,5 +1,4 @@
 
-import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
 import src.builds.BuildA
@@ -39,7 +38,7 @@ project {
     buildType(BuildA)
     buildType(BuildB)
     params{
-       text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
+//       text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
     }
 
 }
