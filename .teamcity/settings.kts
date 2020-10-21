@@ -28,7 +28,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2020.1"
 
 project {
-
+    subProject(Test)
     vcsRoot(SpringVsc)
     buildType(Build)
     params{
@@ -65,4 +65,8 @@ object SpringVsc : GitVcsRoot({
     name = "SpringVsc"
     url = "https://github.com/lezuch/spring-petclinic.git"
     branch = "refs/heads/main"
+})
+
+object Test : Project({
+    name = "Test"
 })
