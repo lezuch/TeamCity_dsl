@@ -32,7 +32,7 @@ project {
     vcsRoot(SpringVsc)
     buildType(Build)
     params{
-//        text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
+       text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
     }
 
 }
@@ -42,7 +42,7 @@ project {
 object Build : BuildType({
     name = "Build and Test"
 
-    artifactRules = "target => target"
+ //   artifactRules = "target => target"
 
     vcs {
         root(SpringVsc)
