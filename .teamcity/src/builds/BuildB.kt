@@ -49,7 +49,7 @@ object BuildB : BuildType({
             }
             artifacts {
                 cleanDestination = true
-                artifactRules = "vsc_joba"
+                artifactRules = "vsc_joba.txt"
             }
         }
     }
