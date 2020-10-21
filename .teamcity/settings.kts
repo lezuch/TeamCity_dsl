@@ -2,7 +2,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
-import src.builds.Build
 import src.subproject.Dev
 import src.subproject.Test
 import src.vcs.SpringVsc
@@ -35,7 +34,6 @@ project {
     subProject(Test)
     subProject(Dev)
     vcsRoot(SpringVsc)
-    buildType(Build)
     params{
        text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
     }
