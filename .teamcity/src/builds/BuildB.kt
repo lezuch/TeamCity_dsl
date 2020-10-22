@@ -7,9 +7,10 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.finishBuildTrigger
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import src.vcs.SpringVsc
 
+val jobA = BaseBuild("JobA")
+
 object BuildB : BuildType({
     name = "Job B"
-    val buildaformclass = BuildAclass()
     vcs {
         root(SpringVsc)
     }
@@ -37,13 +38,13 @@ object BuildB : BuildType({
         vcs {
         }
         finishBuildTrigger {
-            buildType = "${buildaformclass.id}"
+            buildType = "${jobA.id}"
             successfulOnly = true
         }
     }
 
     dependencies{
-        dependency(buildaformclass){
+        dependency(jobA){
             snapshot{
                 onDependencyFailure =  FailureAction.CANCEL
             }

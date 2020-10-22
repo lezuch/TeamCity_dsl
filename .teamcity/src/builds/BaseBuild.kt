@@ -1,8 +1,8 @@
 package src.builds
 
-open class BuildAclass()
+open class BaseBuild(buildName: String)
     : PlatformBase({
-    name = "JobA"
+    name = buildName
     artifactRules = """
         vsc_joba.txt
     """.trimIndent()
