@@ -1,6 +1,6 @@
 package src.builds
 
-class BuildAclass()
+open class BuildAclass()
     : PlatformBase({
     name = "JobA"
     artifactRules = """
