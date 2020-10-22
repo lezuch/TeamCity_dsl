@@ -9,7 +9,7 @@ import src.vcs.SpringVsc
 
 object BuildB : BuildType({
     name = "Job B"
-
+    val buildaformclass = BuildAclass()
     vcs {
         root(SpringVsc)
     }
@@ -37,13 +37,13 @@ object BuildB : BuildType({
         vcs {
         }
         finishBuildTrigger {
-            buildType = "${BuildA.id}"
+            buildType = "${buildaformclass.id}"
             successfulOnly = true
         }
     }
 
     dependencies{
-        dependency(BuildA){
+        dependency(buildaformclass){
             snapshot{
                 onDependencyFailure =  FailureAction.CANCEL
             }
