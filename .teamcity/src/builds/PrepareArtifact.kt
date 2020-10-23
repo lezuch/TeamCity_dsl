@@ -5,6 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.vcs.SpringVsc
 
 object PrepareArtifact : BuildType({
+    name = "PrepareArtifact"
     artifactRules = """
         vsc_joba.txt
     """.trimIndent()
