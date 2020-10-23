@@ -2,6 +2,7 @@
 //import src.builds.BuildA
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
+import src.builds.PrepareArtifact
 import src.subproject.dev.Dev
 import src.subproject.test.Test
 import src.vcs.DslVsc
@@ -37,6 +38,6 @@ project {
 
     vcsRoot(DslVsc)
     vcsRoot(SpringVsc)
-
+    buildType(PrepareArtifact)
 
 }

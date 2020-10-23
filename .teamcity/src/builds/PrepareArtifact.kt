@@ -4,7 +4,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.vcs.SpringVsc
 
-open class PlatformBase(block: BuildType.() -> Unit): BuildType({
+object PrepareArtifact : BuildType({
     artifactRules = """
         vsc_joba.txt
     """.trimIndent()
@@ -23,5 +23,4 @@ open class PlatformBase(block: BuildType.() -> Unit): BuildType({
             """.trimIndent()
         }
     }
-    apply(block)
 })
