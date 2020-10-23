@@ -10,7 +10,7 @@ import src.vcs.SpringVsc
 
 val buildDev = BaseBuild("Build_Dev")
 
-object BuildB : BuildType({
+object GetArtifact : BuildType({
     name = "GetArtifactform.${buildDev.name}"
     vcs {
         root(SpringVsc)
