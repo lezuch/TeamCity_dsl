@@ -19,7 +19,7 @@ open class PlatformBase(block: BuildType.() -> Unit): BuildType({
                 #!/bin/bash
                 
                 VCS_URL=%vcsroot.url%
-                echo "VCS_URL = ${'$'} {VCS_URL}" > vsc_joba.txt
+                echo "VCS_URL = ${'$'}{VCS_URL}" > vsc_joba.txt
             """.trimIndent()
         }
     }
