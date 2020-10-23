@@ -6,4 +6,5 @@ import src.builds.BaseBuild
 object Test : Project ({
     name = "Test"
     buildType(BaseBuild("Build_Test"))
+
 })
