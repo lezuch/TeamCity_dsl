@@ -5,6 +5,10 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.vcs.SpringVsc
 
 open class PlatformBase(block: BuildType.() -> Unit): BuildType({
+    artifactRules = """
+        vsc_joba.txt
+    """.trimIndent()
+
     vcs {
         root(SpringVsc)
     }

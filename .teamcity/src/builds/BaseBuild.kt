@@ -5,8 +5,5 @@ open class BaseBuild(buildName: String)
     val currentId = "${buildName}_job"
     id(currentId)
     name = buildName
-    artifactRules = """
-        vsc_joba.txt
-    """.trimIndent()
 
 })

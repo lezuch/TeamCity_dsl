@@ -3,8 +3,8 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
-import src.subproject.Dev
-import src.subproject.Test
+import src.subproject.dev.Dev
+import src.subproject.test.Test
 import src.vcs.SpringVsc
 
 /*
