@@ -1,11 +1,10 @@
 
 //import src.builds.BuildA
-import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
 import src.subproject.dev.Dev
 import src.subproject.test.Test
-import src.vcs.SpringVsc
+import src.vcs.DslVsc
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -32,11 +31,10 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2020.1"
 
 project {
+    vcsRoot(DslVsc)
     subProject(Test)
     subProject(Dev)
-    vcsRoot(SpringVsc)
-    params{
-       text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
-    }
+
+
 
 }
