@@ -4,6 +4,8 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
 import src.subproject.dev.Dev
 import src.subproject.test.Test
+import src.vcs.DslVsc
+import src.vcs.SpringVsc
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -33,6 +35,8 @@ project {
     subProject(Test)
     subProject(Dev)
 
+    vcsRoot(DslVsc)
+    vcsRoot(SpringVsc)
 
 
 }
