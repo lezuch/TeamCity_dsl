@@ -16,7 +16,7 @@ object GetArtifactTest : BaseBuild({
             """.trimIndent()
         }
         script {
-            name = "Display output form JobA"
+            name = "Display output"
             workingDir = "build"
             scriptContent = """
                 #!/bin/bash
