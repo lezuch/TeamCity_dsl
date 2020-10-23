@@ -3,9 +3,7 @@ package src.subproject.dev
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.builds.BaseBuild
 
-//val buildDev = BaseBuild("Build_Dev")
-
-object GetArtifact : BaseBuild ({
+object GetArtifactDev : BaseBuild ({
     name = "GetArtifactform"
 
     steps {
@@ -13,7 +11,7 @@ object GetArtifact : BaseBuild ({
             name = "Job A"
             scriptContent = """
                 #!/bin/bash
-                echo "Start Job B"
+                echo "To jest job dla Dev"
             """.trimIndent()
         }
         script {

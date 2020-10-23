@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.Project
 
 object Dev : Project ({
     name = "Dev"
-    buildType(GetArtifact)
+    buildType(GetArtifactDev)
     params{
         text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
     }
