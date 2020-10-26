@@ -5,7 +5,6 @@ import src.builds.BaseBuild
 
 object GetArtifactDev : BaseBuild ({
     name = "GetArtifactform"
-
     steps {
         script {
             name = "Job A"
