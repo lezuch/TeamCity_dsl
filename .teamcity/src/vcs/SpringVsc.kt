@@ -6,7 +6,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 object SpringVsc : GitVcsRoot ({
     name = "SpringVsc"
     id(name.toId())
-    url = "git@github.com:lezuch/TeamCity_dsl.git"
+    url = "git@github.com:lezuch/spring-petclinic.git"
     branch = "refs/heads/main"
 
     authMethod = uploadedKey {
