@@ -23,7 +23,7 @@ object BuildUtils : BuildType({
             scriptContent = """
                 #!/bin/bash
                 ls . 
-
+                cat test
             """.trimIndent()
         }
     }
