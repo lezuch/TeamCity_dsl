@@ -6,7 +6,6 @@ import src.vcs.SpringVsc
 
 object PrepareArtifact : BuildType({
     name = "PrepareArtifact"
-    //buildNumberPattern = "%build.counter%"
 
     artifactRules = """
         vsc_joba.txt
