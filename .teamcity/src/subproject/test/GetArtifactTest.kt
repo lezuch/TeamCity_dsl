@@ -2,10 +2,12 @@ package src.subproject.test
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.builds.BaseBuild
+import src.builds.PrepareArtifact
 
 
 object GetArtifactTest : BaseBuild({
     name = "GetArtifactform"
+    buildNumberPattern = "${PrepareArtifact.depParamRefs.buildNumber}"
 
     steps {
         script {

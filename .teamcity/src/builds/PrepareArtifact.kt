@@ -6,6 +6,7 @@ import src.vcs.SpringVsc
 
 object PrepareArtifact : BuildType({
     name = "PrepareArtifact"
+    buildNumberPattern = "1.0.%build.counter%_%build.prefix%"
     artifactRules = """
         vsc_joba.txt
     """.trimIndent()
