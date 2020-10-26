@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.FailureAction
 import jetbrains.buildServer.configs.kotlin.v2019_2.ReuseBuilds
 
 open class BaseBuild(block: BuildType.() -> Unit ) : BuildType({
-    buildNumberPattern = "%build.prefix%_${PrepareArtifact.depParamRefs.buildNumber}"
+    buildNumberPattern = "%build.prefix%_PrepareArtifact_buildnumber_${PrepareArtifact.depParamRefs.buildNumber}"
     dependencies{
         dependency(PrepareArtifact){
             snapshot{
