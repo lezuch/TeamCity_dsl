@@ -8,6 +8,7 @@ object Test : Project ({
     buildType(GetArtifactTest)
     params{
         text("teamcity.ui.settings.readOnly", "true", display = ParameterDisplay.HIDDEN)
+        text("build.prefix", "TEST", display = ParameterDisplay.HIDDEN)
     }
 
 })
