@@ -7,7 +7,7 @@ import src.builds.PrepareArtifact
 
 object GetArtifactTest : BaseBuild({
     name = "GetArtifactform"
-    buildNumberPattern = "${PrepareArtifact.depParamRefs.buildNumber}"
+    buildNumberPattern = "%build.prefix%_${PrepareArtifact.depParamRefs.buildNumber}"
 
     steps {
         script {
