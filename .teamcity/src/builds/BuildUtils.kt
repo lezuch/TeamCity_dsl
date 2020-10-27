@@ -6,9 +6,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import src.vcs.SpringVsc
 
-object BuildUtils : BuildType({
-    name = "BuildUtils"
-
+open class BuildUtils(block: BuildType.() -> Unit ):  BuildType({
     vcs {
         root(SpringVsc, "+:utlis => utils")
         checkoutMode = CheckoutMode.ON_AGENT
