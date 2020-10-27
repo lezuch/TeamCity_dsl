@@ -1,7 +1,6 @@
 package src.builds
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.BuildType
-import jetbrains.buildServer.configs.kotlin.v2019_2.CheckoutMode
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import src.vcs.SpringVsc
@@ -9,7 +8,7 @@ import src.vcs.SpringVsc
 open class BuildUtils(block: BuildType.() -> Unit ):  BuildType({
     vcs {
         root(SpringVsc, "+:utlis => .")
-        checkoutMode = CheckoutMode.ON_AGENT
+
     }
     triggers {
         vcs {
