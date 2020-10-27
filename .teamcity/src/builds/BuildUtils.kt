@@ -8,7 +8,7 @@ import src.vcs.SpringVsc
 
 open class BuildUtils(block: BuildType.() -> Unit ):  BuildType({
     vcs {
-        root(SpringVsc, "+:utlis => utils")
+        root(SpringVsc, "+:utlis => .s")
         checkoutMode = CheckoutMode.ON_AGENT
     }
     triggers {
