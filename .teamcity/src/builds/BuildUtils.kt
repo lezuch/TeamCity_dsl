@@ -9,12 +9,12 @@ object BuildUtils : BuildType({
     name = "BuildUtils"
 
     vcs {
-        root(SpringVsc, "+:utlis => .")
+        root(SpringVsc, "+:utlis => utils")
     }
     triggers {
         vcs {
             triggerRules = "+:test"
-            branchFilter = ""
+            branchFilter = "+:refs/heads/main"
         }
     }
     steps {
@@ -22,8 +22,10 @@ object BuildUtils : BuildType({
             name = "BuildUtils"
             scriptContent = """
                 #!/bin/bash
-                ls . 
-                cat test
+                echo "ls ../"
+                ls ../ 
+                echo "ls ./"
+                ls .              
             """.trimIndent()
         }
     }

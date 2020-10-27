@@ -7,7 +7,7 @@ object DslVsc : GitVcsRoot({
     name = "DslVsc"
     id(name.toId())
     url = "git@github.com:lezuch/TeamCity_dsl.git"
-    branch = "refs/heads/main"
+    branch = ""
 
     authMethod = uploadedKey {
         uploadedKey = "test"
