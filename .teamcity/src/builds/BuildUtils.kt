@@ -14,7 +14,7 @@ object BuildUtils : BuildType({
     triggers {
         vcs {
             triggerRules = "+:test"
-            branchFilter = "+:refs/heads/main"
+            branchFilter = ""
         }
     }
     steps {
