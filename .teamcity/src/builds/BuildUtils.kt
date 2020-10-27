@@ -29,4 +29,5 @@ open class BuildUtils(block: BuildType.() -> Unit ):  BuildType({
             """.trimIndent()
         }
     }
+    apply(block)
 })
