@@ -10,6 +10,6 @@ object DslVsc : GitVcsRoot({
     branch = ""
 
     authMethod = uploadedKey {
-        uploadedKey = "test"
+        uploadedKey = "TC"
     }
 })

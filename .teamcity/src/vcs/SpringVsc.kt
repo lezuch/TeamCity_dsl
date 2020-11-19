@@ -10,7 +10,7 @@ object SpringVsc : GitVcsRoot ({
     branch = "refs/heads/main"
 
     authMethod = uploadedKey {
-        uploadedKey = "test"
+        uploadedKey = "TC"
     }
 
 })
