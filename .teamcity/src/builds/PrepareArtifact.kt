@@ -21,6 +21,7 @@ object PrepareArtifact : BuildType({
                 #!/bin/bash
                 
                 VCS_URL=%vcsroot.url%
+                echo "z TESTA"
                 echo "VCS_URL = ${'$'}{VCS_URL}" > vsc_joba.txt
             """.trimIndent()
         }
