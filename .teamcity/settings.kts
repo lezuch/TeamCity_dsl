@@ -3,9 +3,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
 import src.builds.PrepareArtifact
-import src.subproject.dev.Dev
-import src.subproject.test.Test
-import src.vcs.DslVsc
 import src.vcs.SpringVsc
 
 /*
@@ -33,10 +30,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2020.1"
 
 project {
-    subProject(Test)
-    subProject(Dev)
 
-    vcsRoot(DslVsc)
     vcsRoot(SpringVsc)
     buildType(PrepareArtifact)
 
