@@ -7,13 +7,7 @@ import src.vcs.SpringVsc
 object PrepareArtifact : BuildType({
     name = "PrepareArtifact"
 
-    artifactRules = """
-        vsc_joba.txt
-    """.trimIndent()
 
-    vcs {
-        root(SpringVsc)
-    }
     steps {
         script {
             name="Colect info about VSC"
