@@ -13,9 +13,8 @@ object PrepareArtifact : BuildType({
             name="Colect info about VSC"
             scriptContent="""
                 #!/bin/bash
+                echo "MAIN"
                 
-                VCS_URL=%vcsroot.url%
-                echo "VCS_URL = ${'$'}{VCS_URL}" > vsc_joba.txt
             """.trimIndent()
         }
     }
