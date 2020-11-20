@@ -17,5 +17,13 @@ object PrepareArtifact : BuildType({
                 echo "z TESTA"
             """.trimIndent()
         }
+        script {
+            name="Addtional step from test"
+            scriptContent="""
+                #!/bin/bash
+
+                echo "Second Step"
+            """.trimIndent()
+        }
     }
 })
