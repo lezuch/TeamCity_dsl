@@ -35,18 +35,19 @@ project {
     
     vcsRoot(MyVcsRoot)
     
-val bts = sequential {
-    buildType(Maven("Build", "clean compile"))
-    parallel {
-        buildType(Maven("Fast Test", "clean test", "-Dmaven.test.failure.ignore=true -Dtest=*.unit.*Test"))
-        buildType(Maven("Slow Test", "clean test", "-Dmaven.test.failure.ignore=true -Dtest=*.integration.*Test"))
-    }
-    buildType(Maven("Package", "clean package", "-DskipTests"))
-}.buildTypes()
-
-bts.forEach { buildType(it) }
-bts.last().triggers {
-    vcs {
+    val bts = sequential {
+        buildType(Maven("Build", "clean compile"))
+        parallel {
+            buildType(Maven("Fast Test", "clean test", "-Dmaven.test.failure.ignore=true -Dtest=*.unit.*Test"))
+            buildType(Maven("Slow Test", "clean test", "-Dmaven.test.failure.ignore=true -Dtest=*.integration.*Test"))
+        }
+        buildType(Maven("Package", "clean package", "-DskipTests"))
+    }.buildTypes()
     
+    bts.forEach { buildType(it) }
+    bts.last().triggers {
+        vcs {
+        
+        }
     }
 }
