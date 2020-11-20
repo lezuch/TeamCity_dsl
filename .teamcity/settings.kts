@@ -5,6 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.sequential
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
 import src.builds.Maven
+import src.builds.Test
 import src.vcs.MyVcsRoot
 
 
@@ -35,7 +36,7 @@ version = "2020.1"
 project {
 
     vcsRoot(MyVcsRoot)
-    
+    buildType(Test)
     val bts = sequential {
         buildType(Maven("Build", "clean compile"))
         parallel {
