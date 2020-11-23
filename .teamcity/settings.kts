@@ -36,7 +36,7 @@ project {
     
     params {
         text("artifactory.path", "/dir/test", display = ParameterDisplay.HIDDEN)
-        checkbox("force.path.af", "0", unchecked = "0", checked = "1", display = ParameterDisplay.PROMPT)
+    //    checkbox("force.path.af", "0", unchecked = "0", checked = "1", display = ParameterDisplay.PROMPT)
     }
     
     vcsRoot(MyVcsRoot)

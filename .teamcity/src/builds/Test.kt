@@ -8,11 +8,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 
 object Test : BuildType({
 	name ="Build-TEST"
-	params {
-		if ( "%force.path.af%" == "1" ) {
-			text("artifactory.path", "/dir/forced", display = ParameterDisplay.HIDDEN)
-		}
-	}
+
 	
     steps {
 		script {
@@ -22,7 +18,7 @@ object Test : BuildType({
 			echo "##teamcity[setParameter name='artifactory.path' value='test']"
 			""".trimIndent()
 			conditions {
-				equals("force.path.af", "1")
+				exists("force.path.af")
 			}
 		}
 		script {
