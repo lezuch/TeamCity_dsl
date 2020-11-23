@@ -12,7 +12,6 @@ object Test : BuildType({
 		if ( "%force.path.af%" == "1" ) {
 			text("artifactory.path", "/dir/forced", display = ParameterDisplay.HIDDEN)
 		}
-		
 	}
 	
     steps {
@@ -22,5 +21,16 @@ object Test : BuildType({
 				echo "%artifactory.path%"
 			""".trimIndent()
 		}
+		script {
+			name = "test2"
+			scriptContent = """
+			
+			echo "##teamcity[setParameter name='' value='${'$'}PROC_NUM']"
+			""".trimIndent()
+			conditions {
+				equals("force.path.af", "1")
+			}
+		}
 	}
+	
 })
