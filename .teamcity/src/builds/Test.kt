@@ -18,7 +18,7 @@ object Test : BuildType({
 			echo "##teamcity[setParameter name='artifactory.path' value='test']"
 			""".trimIndent()
 			conditions {
-				exists("force.path.af")
+				doesNotExist("force.path.af")
 			}
 		}
 		script {
