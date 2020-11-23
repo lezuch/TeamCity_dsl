@@ -16,12 +16,6 @@ object Test : BuildType({
 	
     steps {
 		script {
-			name = "Test"
-			scriptContent = """
-				echo "%artifactory.path%"
-			""".trimIndent()
-		}
-		script {
 			name = "test2"
 			scriptContent = """
 			
@@ -31,6 +25,13 @@ object Test : BuildType({
 				equals("force.path.af", "1")
 			}
 		}
+		script {
+			name = "Test"
+			scriptContent = """
+				echo "%artifactory.path%"
+			""".trimIndent()
+		}
+
 	}
 	
 })
