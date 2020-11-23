@@ -19,7 +19,7 @@ object Test : BuildType({
 			name = "test2"
 			scriptContent = """
 			
-			echo "##teamcity[setParameter name='' value='${'$'}PROC_NUM']"
+			echo "##teamcity[setParameter name='artifactory.path' value='test']"
 			""".trimIndent()
 			conditions {
 				equals("force.path.af", "1")
