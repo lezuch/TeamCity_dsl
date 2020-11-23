@@ -40,6 +40,6 @@ project {
     }
     
     vcsRoot(MyVcsRoot)
-    
+    buildType(Test)
     
 }
