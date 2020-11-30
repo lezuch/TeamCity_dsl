@@ -6,7 +6,8 @@ import src.consts.Platform
 
 
 open class Base(platform: Platform, block: BuildType.() -> Unit): BuildType({
-    steps {
+ 
+	steps {
     	script {
     		name = "Test"
 			scriptContent = """
