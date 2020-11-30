@@ -8,7 +8,6 @@ import src.consts.Platform
 
 
 open class Test(block: BuildType.() -> Unit) : Base(Platform.IOS, {
-	name = "BuildTest"
 	
 	steps {
 		script {
