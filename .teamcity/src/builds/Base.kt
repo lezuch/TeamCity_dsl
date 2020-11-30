@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.consts.Platform
 
 
-open class Base(platform: Platform, block: BuildType.() -> Unit): BuildType({
+open class Base(block: BuildType.() -> Unit): BuildType({
  
 	steps {
     	script {

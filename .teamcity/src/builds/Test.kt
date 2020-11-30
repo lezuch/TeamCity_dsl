@@ -7,8 +7,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.consts.Platform
 
 
-open class Test(block: BuildType.() -> Unit) : Base(Platform.IOS, {
-	name = "build"
+open class Test(block: BuildType.() -> Unit) : Base({
 	steps {
 		script {
 			name = "Prod"
