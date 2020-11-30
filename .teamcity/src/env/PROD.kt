@@ -5,5 +5,6 @@ import src.builds.Test
 
 object PROD: Project({
 	name = "PROD"
-	buildType(TestPROD)
+	
+	buildType(TestPROD())
 })
