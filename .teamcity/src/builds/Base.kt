@@ -1,22 +1,17 @@
 package src.builds
 
-
 import jetbrains.buildServer.configs.kotlin.v2019_2.BuildType
-import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import src.consts.Platform
 
 
-open class Test(block: BuildType.() -> Unit) : Base(Platform.IOS, {
-	name = "BuildTest"
-	
-	steps {
-		script {
-			name = "Prod"
+open class Base(platform: Platform, block: BuildType.() -> Unit): BuildType({
+    steps {
+    	script {
+    		name = "Test"
 			scriptContent = """
-				echo "prod"
+				echo "test"
 			""".trimIndent()
 		}
 	}
 })
-

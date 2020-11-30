@@ -7,6 +7,8 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.sequential
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
 import src.builds.Test
+import src.env.DEV
+import src.env.PROD
 import src.vcs.MyVcsRoot
 
 /*
@@ -40,6 +42,8 @@ project {
     }
     
     vcsRoot(MyVcsRoot)
-    buildType(Test)
+    subProjects(DEV)
+    subProjects(PROD)
+    
     
 }
