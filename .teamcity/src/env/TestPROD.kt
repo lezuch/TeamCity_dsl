@@ -1,7 +1,11 @@
 package src.env
 
-import src.builds.Test
+import jetbrains.buildServer.configs.kotlin.v2019_2.BuildType
+import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
+import src.builds.Base
 
-class TestPROD : Test ({
-	name = "TestPROD"
+object TestPROD : BuildType({
+	name = "builProf"
+	templates(Base)
+	
 })
