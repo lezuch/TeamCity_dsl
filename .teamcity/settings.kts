@@ -4,6 +4,7 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.v2019_2.project
 import jetbrains.buildServer.configs.kotlin.v2019_2.version
+import src.builds.Base
 import src.env.DEV
 import src.env.PROD
 import src.vcs.MyVcsRoot
@@ -37,7 +38,7 @@ project {
         text("artifactory.path", "/dir/test", display = ParameterDisplay.HIDDEN)
     //    checkbox("force.path.af", "0", unchecked = "0", checked = "1", display = ParameterDisplay.PROMPT)
     }
-    
+    template(Base)
     vcsRoot(MyVcsRoot)
     subProjects(DEV)
     subProjects(PROD)
