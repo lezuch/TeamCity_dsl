@@ -6,6 +6,7 @@ import src.builds.Base
 
 object TestPROD : BuildType({
 	name = "builProf"
+	
 	templates(Base)
 	
 })
