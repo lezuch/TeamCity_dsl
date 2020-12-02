@@ -7,7 +7,7 @@ import src.consts.Platform
 
 
 object Base: Template({
- 
+    name = "base"
 	steps {
 		script {
 			name = "Upload dist"
